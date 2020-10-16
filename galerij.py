@@ -29,8 +29,8 @@ if __name__ == '__main__':
 
             f.write(f"\t\t\t<h3 align='center'>{df.iloc[i]['titel']}</h3>\n")
             f.write(f"\t\t\t<p align='center'>{df.iloc[i]['naam']}</p>\n")
-            f.write(f"\t\t\t<a href='{df.iloc[i]['jaar']}/{df.iloc[i]['studentnummer']}.jpg' target='_blank'>\n")
-            f.write(f"\t\t\t\t<img src='{df.iloc[i]['jaar']}/{df.iloc[i]['studentnummer']}.jpg' width='300'>\n")
+            f.write(f"\t\t\t<a href='https://github.com/tijmenjoppe/IPASS-AI/raw/main/{df.iloc[i]['jaar']}/{df.iloc[i]['studentnummer']}.jpg' target='_blank'>\n")
+            f.write(f"\t\t\t\t<img src='https://github.com/tijmenjoppe/IPASS-AI/raw/main/{df.iloc[i]['jaar']}/{df.iloc[i]['studentnummer']}.jpg' width='300'>\n")
             f.write(f"\t\t\t</a>\n")
             f.write(f"\t\t\t<p align='right'>\n")
             f.write(f"\t\t\t\t<a href='mailto:{df.iloc[i]['email']}'>\n")
