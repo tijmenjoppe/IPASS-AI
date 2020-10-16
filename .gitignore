@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 *.pdf
 galerij.csv
+2018/*.png
+galerij.html
