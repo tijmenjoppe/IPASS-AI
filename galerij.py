@@ -6,6 +6,8 @@ import numpy as np
 
 
 def generate_gallery(df, category=''):
+    base_domain = 'https://tijmenjoppe.github.io/IPASS-AI'
+
     cells_per_row = 3
     cell_color = " bgcolor='#F8F8F8'"
     cell_width = 300
@@ -19,8 +21,9 @@ def generate_gallery(df, category=''):
 
     html_string_end = "</body>\n</html>\n"
 
-    print(f"Creating galery page '{category.replace(' ', '_')}.html' with {len(df)} entries...")
-    with open(f"{category.replace(' ', '_')}.html", 'w') as f:
+    filename = category.replace(' ', '_').lower() + '.html'
+    print(f"Creating galery page '{filename}' with {len(df)} entries...")
+    with open(filename, 'w') as f:
         # f.write(html_string_start)
         f.write('<table>\n')
         f.write('  <tr>\n')
@@ -30,8 +33,8 @@ def generate_gallery(df, category=''):
             f.write(f"    <td style='padding:16px; width:{cell_width}px; overflow:hidden;' align='center' valign='top'{cell_color if i % 2 else ''}>\n")
             f.write(f"      <h3 align='center'>{df.iloc[i]['titel']}</h3>\n")
             f.write(f"      <p align='center'>door {df.iloc[i]['naam']}</p>\n")
-            f.write(f"      <a href='https://github.com/tijmenjoppe/IPASS-AI/raw/main/{df.iloc[i]['jaar']}/{df.iloc[i]['studentnummer']}.jpg' target='_blank'>\n")
-            f.write(f"        <img style='width:100%; height:auto;' src='https://github.com/tijmenjoppe/IPASS-AI/raw/main/{df.iloc[i]['jaar']}/{df.iloc[i]['studentnummer']}.jpg'>\n")
+            f.write(f"      <a href='{base_domain}/{df.iloc[i]['jaar']}/{df.iloc[i]['studentnummer']}.jpg' target='_blank'>\n")
+            f.write(f"        <img style='width:100%; height:auto;' src='{base_domain}/{df.iloc[i]['jaar']}/{df.iloc[i]['studentnummer']}.jpg'>\n")
             f.write(f"      </a>\n")
             f.write(f"      <p align='left'>\n")
 
@@ -44,11 +47,11 @@ def generate_gallery(df, category=''):
             # Only add email if it is available
             if not pd.isnull(df.iloc[i]['email']):
                 f.write(f"          <a style='text-decoration:none;' href='mailto:{df.iloc[i]['email']}'>\n")
-                f.write(f"            <img src='https://canvas.hu.nl/files/1287896/download?download_frd=1' alt='E-mail'>\n")
+                f.write(f"            <img src='{base_domain}/img/email.png' alt='E-mail'>\n")
                 f.write(f"          </a>\n")
 
             f.write(f"          <a style='text-decoration:none;' href='{df.iloc[i]['github']}' target='_blank'>\n")
-            f.write(f"            <img src='https://canvas.hu.nl/files/1287897/download?download_frd=1' alt='GitHub'>\n")
+            f.write(f"            <img src='{base_domain}/img/github.png' alt='GitHub'>\n")
             f.write(f"          </a>\n")
             f.write(f"        </span>\n")
             f.write(f"      </p>\n")
@@ -72,10 +75,21 @@ if __name__ == '__main__':
     df = pd.read_csv('galerij.csv', delimiter=';')
     print(f"Read 'galerij.csv': {df.shape[0]} rows, {df.shape[1]} cols.")
 
-    jaren = df['jaar'].unique()
-    for jaar in jaren:
-        generate_gallery(df[df['jaar'] == jaar], str(jaar))
+    with open("index.html", 'w') as index_file:
+        index_file.write("<h1>IPASS AI</h1>\n\n")
 
-    tags = df['categorie'].dropna().unique()
-    for tag in tags:
-        generate_gallery(df[df['categorie'] == tag], tag)
+        index_file.write("<h2>Projecten per jaar</h2>\n\n<ul>\n")
+        jaren = df['jaar'].unique()
+        for jaar in jaren:
+            generate_gallery(df[df['jaar'] == jaar], str(jaar))
+            pagename = str(jaar) + '.html'
+            index_file.write(f"   <li><a href='{pagename}'>{jaar}</a></li>\n")
+
+        index_file.write("</ul>\n\n<h2>Projecten per onderwerp</h2>\n\n<ul>\n")
+        tags = df['categorie'].dropna().unique()
+        for tag in tags:
+            generate_gallery(df[df['categorie'] == tag], tag)
+            pagename = tag.replace(' ', '_').lower() + '.html'
+            index_file.write(f"   <li><a href='{pagename}'>{tag}</a></li>\n")
+
+        index_file.write("</ul>\n")
