@@ -75,9 +75,14 @@ if __name__ == '__main__':
     df = pd.read_csv('galerij.csv', delimiter=';')
     print(f"Read 'galerij.csv': {df.shape[0]} rows, {df.shape[1]} cols.")
 
+    # TODO: aanpassen naar columnnaam 'poster'
+    df = df[df['geprint'] == 'ja']
+    print(f"{df.shape[0]} rows left after dropping projects without poster.")
+
     with open("index.html", 'w') as index_file:
         index_file.write("<h1>IPASS AI</h1>\n\n")
 
+        # Create page for each year
         index_file.write("<h2>Projecten per jaar</h2>\n\n<ul>\n")
         jaren = df['jaar'].unique()
         for jaar in jaren:
@@ -85,10 +90,18 @@ if __name__ == '__main__':
             pagename = str(jaar) + '.html'
             index_file.write(f"   <li><a href='{pagename}'>{jaar}</a></li>\n")
 
+        # Create page for each category/tag
         index_file.write("</ul>\n\n<h2>Projecten per onderwerp</h2>\n\n<ul>\n")
-        tags = df['categorie'].dropna().unique()
+
+        # Extract all tags from category column (multiple tags are delimited with an '|')
+        categories = df['categorie'].dropna().unique()
+        tags = set()
+        for category in categories:
+            tags |= set(category.split('|'))
+            print(tags)
+
         for tag in tags:
-            generate_gallery(df[df['categorie'] == tag], tag)
+            generate_gallery(df[df['categorie'].str.contains(tag, na=False)], tag)
             pagename = tag.replace(' ', '_').lower() + '.html'
             index_file.write(f"   <li><a href='{pagename}'>{tag}</a></li>\n")
 
