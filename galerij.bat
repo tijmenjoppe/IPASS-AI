@@ -1,0 +1,2 @@
+python galerij.py
+pause

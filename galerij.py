@@ -75,8 +75,7 @@ if __name__ == '__main__':
     df = pd.read_csv('galerij.csv', delimiter=';')
     print(f"Read 'galerij.csv': {df.shape[0]} rows, {df.shape[1]} cols.")
 
-    # TODO: aanpassen naar columnnaam 'poster'
-    df = df[df['geprint'] == 'ja']
+    df = df[df['poster'] == 'ja']
     print(f"{df.shape[0]} rows left after dropping projects without poster.")
 
     with open("index.html", 'w') as index_file:
