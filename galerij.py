@@ -50,9 +50,12 @@ def generate_gallery(df, category=''):
                 f.write(f"            <img src='{base_domain}/img/email.png' alt='E-mail'>\n")
                 f.write(f"          </a>\n")
 
-            f.write(f"          <a style='text-decoration:none;' href='{df.iloc[i]['github']}' target='_blank'>\n")
-            f.write(f"            <img src='{base_domain}/img/github.png' alt='GitHub'>\n")
-            f.write(f"          </a>\n")
+            # Only add link to GitHub if it is available
+            if not pd.isnull(df.iloc[i]['github']):
+                f.write(f"          <a style='text-decoration:none;' href='{df.iloc[i]['github']}' target='_blank'>\n")
+                f.write(f"            <img src='{base_domain}/img/github.png' alt='GitHub'>\n")
+                f.write(f"          </a>\n")
+
             f.write(f"        </span>\n")
             f.write(f"      </p>\n")
             f.write('    </td>\n')
@@ -99,7 +102,7 @@ if __name__ == '__main__':
             tags |= set(category.split('|'))
             print(tags)
 
-        for tag in tags:
+        for tag in sorted(tags):
             generate_gallery(df[df['categorie'].str.contains(tag, na=False)], tag)
             pagename = tag.replace(' ', '_').lower() + '.html'
             index_file.write(f"   <li><a href='{pagename}'>{tag}</a></li>\n")
