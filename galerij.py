@@ -44,11 +44,13 @@ def generate_gallery(df, category=''):
 
             f.write(f"        <span style='float:right;'>\n")
 
-            # Only add email if it is available
-            if not pd.isnull(df.iloc[i]['email']):
-                f.write(f"          <a style='text-decoration:none;' href='mailto:{df.iloc[i]['email']}'>\n")
-                f.write(f"            <img src='{base_domain}/img/email.png' alt='E-mail'>\n")
-                f.write(f"          </a>\n")
+            # Add email
+            email = df.iloc[i]['email']
+            if pd.isnull(df.iloc[i]['email']):                # Generate email if it is unavailable
+                email = '.'.join(df.iloc[i]['naam'].split(' ', 1)).lower().replace(' ','') + '@student.hu.nl'
+            f.write(f"          <a style='text-decoration:none;' href='mailto:{email}'>\n")
+            f.write(f"            <img src='{base_domain}/img/email.png' alt='E-mail'>\n")
+            f.write(f"          </a>\n")
 
             # Only add link to GitHub if it is available
             if not pd.isnull(df.iloc[i]['github']):
