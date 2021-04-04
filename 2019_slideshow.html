@@ -3,7 +3,7 @@
 		<link rel="stylesheet" href="css/simple-slideshow-styles.css"/>
 	</head>
 	<body>
-		<div class="bss-slides num1" tabindex="1" autofocus="autofocus">
+		<div class="bss-slides" tabindex="1" autofocus="autofocus">
 			<figure>
 				<img style='height:100%; width:auto;' src='https://tijmenjoppe.github.io/IPASS-AI/2019/1754339.jpg'/>
 				<figcaption>Body Conscious door <a href="mailto:tijmen.muller@hu.nl">Niels Bijl</a>
@@ -19,7 +19,23 @@
 	<script src="js/better-simple-slideshow.js"></script>
 
 <script>
-makeBSS('.bss-slides');
+var options = {
+            // default selector is "figure"
+            selector: ".my-selector",
+            //auto-advancing slides? accepts boolean (true/false) or object
+            auto : {
+                // speed to advance slides at. accepts number of milliseconds
+                speed : 2500,
+                // pause advancing on mouseover? accepts boolean
+                pauseOnHover : false
+            },
+            // show fullscreen toggle? accepts boolean
+            fullScreen : true,
+            // support swiping on touch devices? accepts boolean, requires hammer.js
+            swipe : false
+        };
+
+makeBSS('.bss-slides', options);
 </script>
 
 </html>
