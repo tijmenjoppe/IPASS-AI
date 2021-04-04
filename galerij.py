@@ -30,11 +30,14 @@ def generate_gallery(df, category=''):
 
         i = 0
         while i < len(df):
-            f.write(f"    <td style='padding:16px; width:{cell_width}px; overflow:hidden;' align='center' valign='top'{cell_color if i % 2 else ''}>\n")
+            f.write(
+                f"    <td style='padding:16px; width:{cell_width}px; overflow:hidden;' align='center' valign='top'{cell_color if i % 2 else ''}>\n")
             f.write(f"      <h3 align='center'>{df.iloc[i]['titel']}</h3>\n")
             f.write(f"      <p align='center'>door {df.iloc[i]['naam']}</p>\n")
-            f.write(f"      <a href='{base_domain}/{df.iloc[i]['jaar']}/{df.iloc[i]['studentnummer']}.jpg' target='_blank'>\n")
-            f.write(f"        <img style='width:100%; height:auto;' src='{base_domain}/{df.iloc[i]['jaar']}/{df.iloc[i]['studentnummer']}.jpg'>\n")
+            f.write(
+                f"      <a href='{base_domain}/{df.iloc[i]['jaar']}/{df.iloc[i]['studentnummer']}.jpg' target='_blank'>\n")
+            f.write(
+                f"        <img style='width:100%; height:auto;' src='{base_domain}/{df.iloc[i]['jaar']}/{df.iloc[i]['studentnummer']}.jpg'>\n")
             f.write(f"      </a>\n")
             f.write(f"      <p align='left'>\n")
 
@@ -46,8 +49,8 @@ def generate_gallery(df, category=''):
 
             # Add email
             email = df.iloc[i]['email']
-            if pd.isnull(df.iloc[i]['email']):                # Generate email if it is unavailable
-                email = '.'.join(df.iloc[i]['naam'].split(' ', 1)).lower().replace(' ','') + '@student.hu.nl'
+            if pd.isnull(df.iloc[i]['email']):  # Generate email if it is unavailable
+                email = '.'.join(df.iloc[i]['naam'].split(' ', 1)).lower().replace(' ', '') + '@student.hu.nl'
             f.write(f"          <a style='text-decoration:none;' href='mailto:{email}'>\n")
             f.write(f"            <img src='{base_domain}/img/email.png' alt='E-mail'>\n")
             f.write(f"          </a>\n")
@@ -76,6 +79,58 @@ def generate_gallery(df, category=''):
         # f.write(html_string_end)
 
 
+def generate_slideshow(df, category=''):
+    base_domain = 'https://tijmenjoppe.github.io/IPASS-AI'
+
+    html_string_start = '''<html>
+	<head>
+		<link rel="stylesheet" href="css/simple-slideshow-styles.css"/>
+	</head>
+	<body>
+		<div class="bss-slides num1" tabindex="1" autofocus="autofocus">
+'''
+
+    html_string_end = '''       </div>
+	</body>
+	<script src="js/better-simple-slideshow.js"></script>
+
+<script>
+var options = {
+            auto : {
+                speed : 15000,
+                pauseOnHover : false
+            },
+            fullScreen : true,
+        };
+makeBSS('.bss-slides', options);
+</script>
+
+</html>
+'''
+
+    filename = category.replace(' ', '_').lower() + '_ss.html'
+
+    print(f"Creating slideshow '{filename}' with {len(df)} entries...")
+    with open(filename, 'w') as f:
+        f.write(html_string_start)
+
+        i = 0
+        while i < len(df):
+            # Add email
+            email = df.iloc[i]['email']
+            if pd.isnull(df.iloc[i]['email']):  # Generate email if it is unavailable
+                email = '.'.join(df.iloc[i]['naam'].split(' ', 1)).lower().replace(' ', '') + '@student.hu.nl'
+
+            f.write(f'\t\t\t<figure>\n')
+            f.write(f'\t\t\t\t<img style="height:100%;" src="{base_domain}/{df.iloc[i]["jaar"]}/{df.iloc[i]["studentnummer"]}.jpg"/>\n')
+            f.write(f'\t\t\t\t<figcaption>{df.iloc[i]["titel"]} door <a href="mailto:{email}">{df.iloc[i]["naam"]}</a></figcaption>\n')
+            f.write(f'\t\t\t</figure>\n')
+
+            i += 1
+
+        f.write(html_string_end)
+
+
 if __name__ == '__main__':
     df = pd.read_csv('galerij.csv', delimiter=';')
     print(f"Read 'galerij.csv': {df.shape[0]} rows, {df.shape[1]} cols.")
@@ -91,8 +146,8 @@ if __name__ == '__main__':
         jaren = df['jaar'].unique()
         for jaar in jaren:
             generate_gallery(df[df['jaar'] == jaar], str(jaar))
-            pagename = str(jaar) + '.html'
-            index_file.write(f"   <li><a href='{pagename}'>{jaar}</a></li>\n")
+            generate_slideshow(df[df['jaar'] == jaar], str(jaar))
+            index_file.write(f"   <li><a href='{str(jaar) + '.html'}'>{jaar}</a></li>\n")
 
         # Create page for each category/tag
         index_file.write("</ul>\n\n<h2>Projecten per onderwerp</h2>\n\n<ul>\n")
