@@ -41,9 +41,17 @@ def generate_gallery(df, category=''):
             f.write(f"      </a>\n")
             f.write(f"      <p align='left'>\n")
 
-            # Only add category if it is available
+            # Add categories
             if not pd.isnull(df.iloc[i]['categorie']):
-                f.write(f"        {df.iloc[i]['categorie']}\n")
+                tags = [c.strip() for c in df.iloc[i]['categorie'].split('|')]
+                f.write(f"        ")
+                for tag in tags:
+                    f.write(f"<a href='{base_domain}/{tag.replace(' ', '_').lower()}.html'>{tag}</a>")
+
+                    if tag == tags[-1]:
+                        f.write(f"\n")
+                    else:
+                        f.write(f" | ")
 
             f.write(f"        <span style='float:right;'>\n")
 
@@ -156,8 +164,8 @@ if __name__ == '__main__':
         categories = df['categorie'].dropna().unique()
         tags = set()
         for category in categories:
-            tags |= set(category.split('|'))
-            print(tags)
+            tags |= set([tag.strip() for tag in category.split('|')])
+            # print(tags)
 
         for tag in sorted(tags):
             generate_gallery(df[df['categorie'].str.contains(tag, na=False)], tag)
