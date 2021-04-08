@@ -7,6 +7,6 @@ rem magick mogrify -verbose -density 600 -resize 3200x3200 -strip -interlace Pla
 
 rem Convert PNG to JPG
 
-magick mogrify -verbose -format jpg -resize 3200x3200 -quality 95 2019/*.png
+magick mogrify -verbose -format jpg -resize 3200x3200 -background white -alpha remove -alpha off -quality 95 2019/*.png
 
 pause
