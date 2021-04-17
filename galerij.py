@@ -22,6 +22,9 @@ def generate_gallery(df, category=''):
     html_string_end = "</body>\n</html>\n"
 
     filename = category.replace(' ', '_').lower() + '.html'
+    if category == '':
+        filename = 'ipass.html'
+
     print(f"Creating galery page '{filename}' with {len(df)} entries...")
     with open(filename, 'w') as f:
         # f.write(html_string_start)
@@ -116,7 +119,9 @@ makeBSS('.bss-slides', options);
 </html>
 '''
 
-    filename = category.replace(' ', '_').lower() + '_ss.html'
+    filename = category.replace(' ', '_').lower() + '_slideshow.html'
+    if category == '':
+        filename = 'ipass_slideshow.html'
 
     print(f"Creating slideshow '{filename}' with {len(df)} entries...")
     with open(filename, 'w') as f:
@@ -146,10 +151,19 @@ if __name__ == '__main__':
     df = df[df['poster'] == 'ja']
     print(f"{df.shape[0]} rows left after dropping projects without poster.")
 
+    # Sort by year, then by student id
+    df.sort_values(['jaar', 'studentnummer'])
+
     with open("index.html", 'w') as index_file:
+        # Create page with all project posters
+        print("Creating overview page...")
         index_file.write("<h1>IPASS AI</h1>\n\n")
+        index_file.write("<a href='ipass.html'}'>Alle projecten</a>\n\n")
+        generate_gallery(df)
+        generate_slideshow(df)
 
         # Create page for each year
+        print("\nCreating pages grouped by year...")
         index_file.write("<h2>Projecten per jaar</h2>\n\n<ul>\n")
         jaren = df['jaar'].unique()
         for jaar in jaren:
@@ -158,6 +172,7 @@ if __name__ == '__main__':
             index_file.write(f"   <li><a href='{str(jaar) + '.html'}'>{jaar}</a></li>\n")
 
         # Create page for each category/tag
+        print("\nCreating pages grouped by tag...")
         index_file.write("</ul>\n\n<h2>Projecten per onderwerp</h2>\n\n<ul>\n")
 
         # Extract all tags from category column (multiple tags are delimited with an '|')
@@ -165,9 +180,11 @@ if __name__ == '__main__':
         tags = set()
         for category in categories:
             tags |= set([tag.strip() for tag in category.split('|')])
-            # print(tags)
 
-        for tag in sorted(tags):
+        tags = sorted(tags)
+        print(f"{len(tags)} categories: {tags}")
+
+        for tag in tags:
             generate_gallery(df[df['categorie'].str.contains(tag, na=False)], tag)
             pagename = tag.replace(' ', '_').lower() + '.html'
             index_file.write(f"   <li><a href='{pagename}'>{tag}</a></li>\n")
