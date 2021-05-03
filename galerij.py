@@ -98,6 +98,7 @@ def generate_slideshow(df, category=''):
 		<link rel="stylesheet" href="css/simple-slideshow-styles.css"/>
 	</head>
 	<body>
+        <!-- Source: https://github.com/leemark/better-simple-slideshow -->
 		<div class="bss-slides num1" tabindex="1" autofocus="autofocus">
 '''
 
@@ -152,7 +153,7 @@ if __name__ == '__main__':
     print(f"{df.shape[0]} rows left after dropping projects without poster.")
 
     # Sort by year, then by student id
-    df.sort_values(['jaar', 'studentnummer'])
+    df = df.sort_values(['jaar', 'studentnummer'])
 
     with open("index.html", 'w') as index_file:
         # Create page with all project posters
