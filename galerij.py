@@ -58,6 +58,12 @@ def generate_gallery(df, category=''):
 
             f.write(f"        <span style='float:right;'>\n")
 
+            # Only add link to video if it is available
+            if df.iloc[i]['video'] == 'ja':
+                f.write(f"          <a href='{base_domain}/{df.iloc[i]['jaar']}/{df.iloc[i]['studentnummer']}.mp4' target='_blank'>\n")
+                f.write(f"            <img src='{base_domain}/img/video.png' alt='Video'>\n")
+                f.write(f"          </a>\n")
+
             # Add email
             email = df.iloc[i]['email']
             if pd.isnull(df.iloc[i]['email']):  # Generate email if it is unavailable
