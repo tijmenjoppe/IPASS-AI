@@ -1,0 +1,473 @@
+{
+	"ipass-ai": [
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2018/1694955.jpg",
+			"caption": "Optical Character Recognition",
+			"student": "Marc Zoomers",
+			"year": "2018",
+			"email": "marc.zoomers@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2018/1715354.jpg",
+			"caption": "Mastermind supersolver",
+			"student": "Freek Gerrits Jans",
+			"year": "2018",
+			"email": "freek.gerritsjans@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2018/1715417.jpg",
+			"caption": "Data-gedreven slaapritme-analyse",
+			"student": "Stijn Fenijn",
+			"year": "2018",
+			"email": "stijn.fenijn@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2018/1719949.jpg",
+			"caption": "Astrodynamica",
+			"student": "Lucas van Wijk",
+			"year": "2018",
+			"email": "lucas.vanwijk@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2018/1737897.jpg",
+			"caption": "Strooiwagens & Traveling Salesman Problem",
+			"student": "Esmeralda de Wolf",
+			"year": "2018",
+			"email": "esmeralda.dewolf@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2018/1738742.jpg",
+			"caption": "DriftAI",
+			"student": "Selene Blok",
+			"year": "2018",
+			"email": "selene.blok@hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2018/1740426.jpg",
+			"caption": "NKepler",
+			"student": "Casper Smet",
+			"year": "2018",
+			"email": "casper.smet@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2018/1740697.jpg",
+			"caption": "PlaguePy",
+			"student": "Thijs van den Berg",
+			"year": "2018",
+			"email": "thijs.vandenberg@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2018/1743036.jpg",
+			"caption": "The Maze Solver",
+			"student": "Gijsbert Nutma",
+			"year": "2018",
+			"email": "gijsbert.nutma@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2018/1743424.jpg",
+			"caption": "Formaticx",
+			"student": "Stan Meyberg",
+			"year": "2018",
+			"email": "stan.meyberg@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2018/1744029.jpg",
+			"caption": "Voetbalwedstrijden voorspellen",
+			"student": "Tom Blokland",
+			"year": "2018",
+			"email": "tom.blokland@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2018/1745377.jpg",
+			"caption": "TextSent",
+			"student": "Reinier van Leeuwen",
+			"year": "2018",
+			"email": "reinier.vanleeuwen@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2018/1746125.jpg",
+			"caption": "Sudoku oplosser",
+			"student": "Carlo Keizer",
+			"year": "2018",
+			"email": "carlo.keizer@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2018/1748884.jpg",
+			"caption": "Natuurlijke evolutie van marketing",
+			"student": "Sinem Ertem",
+			"year": "2018",
+			"email": "sinem.ertem@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1735290.jpg",
+			"caption": "TeTe",
+			"student": "Ama Lee",
+			"year": "2019",
+			"email": "ama.lee@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1741217.jpg",
+			"caption": "Fabrik Animatie Algoritme",
+			"student": "Yannick van Diermen",
+			"year": "2019",
+			"email": "yannick.vandiermen@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1754339.jpg",
+			"caption": "Body Conscious",
+			"student": "Niels Bijl",
+			"year": "2019",
+			"email": "niels.bijl@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1755488.jpg",
+			"caption": "RiskSniffer",
+			"student": "Mick Luuring",
+			"year": "2019",
+			"email": "mick.luuring@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1755585.jpg",
+			"caption": "Othello",
+			"student": "Quinn de Groot",
+			"year": "2019",
+			"email": "quinn.degroot@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1755920.jpg",
+			"caption": "De Kortste Route",
+			"student": "Jelle Stiesri",
+			"year": "2019",
+			"email": "jelle.stiesri@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1756450.jpg",
+			"caption": "Bacterial growth curve modeling",
+			"student": "Maria Dukmak",
+			"year": "2019",
+			"email": "maria.dukmak@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1756708.jpg",
+			"caption": "ViralSim",
+			"student": "Gerrit van de Bunt",
+			"year": "2019",
+			"email": "gerrit.vandebunt@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1756864.jpg",
+			"caption": "Floorbal Voorspellen",
+			"student": "Nonne Hodes",
+			"year": "2019",
+			"email": "nonne.hodes@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1757028.jpg",
+			"caption": "CatanAI",
+			"student": "Lucas van der Horst",
+			"year": "2019",
+			"email": "lucas.vanderhorst@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1758191.jpg",
+			"caption": "Dam AI",
+			"student": "Thijme de Bruijn",
+			"year": "2019",
+			"email": "thijme.debruijn@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1758374.jpg",
+			"caption": "Battleship AI",
+			"student": "Floris Videler",
+			"year": "2019",
+			"email": "floris.videler@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1759523.jpg",
+			"caption": "Naive Bayes Sentiment Analysis",
+			"student": "Berkan Cakir",
+			"year": "2019",
+			"email": "berkan.cakir@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1760105.jpg",
+			"caption": "Sudoku Trainer",
+			"student": "Moos Boot",
+			"year": "2019",
+			"email": "moos.boot@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1760329.jpg",
+			"caption": "RoadPollutionPY",
+			"student": "David Demmers",
+			"year": "2019",
+			"email": "david.demmers@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1762581.jpg",
+			"caption": "Dungeon & Dragons Generator Tool",
+			"student": "Richard Jansen",
+			"year": "2019",
+			"email": "richard.jansen@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1762818.jpg",
+			"caption": "Finn",
+			"student": "Kai ter Horst",
+			"year": "2019",
+			"email": "kai.terhorst@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1762891.jpg",
+			"caption": "A-star Pathfinding",
+			"student": "Wail Abou",
+			"year": "2019",
+			"email": "wail.abou@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1763456.jpg",
+			"caption": "Genetic Algoritm for Blackjack",
+			"student": "Kevin Wang",
+			"year": "2019",
+			"email": "kevin.wang@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1763930.jpg",
+			"caption": "De Barcode Scanner",
+			"student": "Ruben van Raaij",
+			"year": "2019",
+			"email": "ruben.vanraaij@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1764467.jpg",
+			"caption": "Sudoku Solver",
+			"student": "Guy Veenhof",
+			"year": "2019",
+			"email": "guy.veenhof@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1770991.jpg",
+			"caption": "League of Legends Drafter",
+			"student": "Lucas Siekkotter",
+			"year": "2019",
+			"email": "lucas.siekkotter@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1707815.jpg",
+			"caption": "Battleship AI",
+			"student": "Justin Klein",
+			"year": "2020",
+			"email": "justin.klein@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1720733.jpg",
+			"caption": "Tectonic plate simulator",
+			"student": "Frank Spakman",
+			"year": "2020",
+			"email": "frank.spakman@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1756237.jpg",
+			"caption": "Blackjack Assist Tool",
+			"student": "Jari Wezer",
+			"year": "2020",
+			"email": "jari.wezer@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1758786.jpg",
+			"caption": "Vier op een Rij vs. AI",
+			"student": "Bart de Vries",
+			"year": "2020",
+			"email": "bart.devries@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1759898.jpg",
+			"caption": "Tic Tac Toe+",
+			"student": "Luuk Bouwman",
+			"year": "2020",
+			"email": "luuk.bouwman@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1760229.jpg",
+			"caption": "Music Explorer",
+			"student": "Emiel Verhoef",
+			"year": "2020",
+			"email": "emiel.verhoef@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1763372.jpg",
+			"caption": "Rubik's Cube Solver",
+			"student": "Adam Chebil",
+			"year": "2020",
+			"email": "mahmoud.chebil@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1771225.jpg",
+			"caption": "Better Directions",
+			"student": "Timo Hak",
+			"year": "2020",
+			"email": "timo.hak@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1776495.jpg",
+			"caption": "The Big crunch",
+			"student": "Hussin Almoustafa",
+			"year": "2020",
+			"email": "hussin.almoustafa@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1777159.jpg",
+			"caption": "Goedezorg scheduling systeem",
+			"student": "Jip van der Heide",
+			"year": "2020",
+			"email": "jip.vanderheide@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1777503.jpg",
+			"caption": "Logopedisch Scrabble",
+			"student": "Kenny van den Berg",
+			"year": "2020",
+			"email": "kenny.vandenberg@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1778187.jpg",
+			"caption": "Woovup Recommendation Engine",
+			"student": "Jelmer Hilhorst",
+			"year": "2020",
+			"email": "jelmer.hilhorst@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1778287.jpg",
+			"caption": "TSP met ACO door Haagse Beemden",
+			"student": "Gaynora van Dommelen",
+			"year": "2020",
+			"email": "gaynora.vandommelen@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1779004.jpg",
+			"caption": "Score prediction algorithm",
+			"student": "Kaedin Schouten",
+			"year": "2020",
+			"email": "kaedin.schouten@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1779320.jpg",
+			"caption": "Random Crossword Mania",
+			"student": "Bram van Leusden",
+			"year": "2020",
+			"email": "bram.vanleusden@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1780646.jpg",
+			"caption": "A-Star Pathfinding en de AH",
+			"student": "Peter Brouwer",
+			"year": "2020",
+			"email": "peter.brouwer@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1781244.jpg",
+			"caption": "Woovup Zoekalgoritmes",
+			"student": "Thijmen Kammeijer",
+			"year": "2020",
+			"email": "thijmen.kammeijer@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1781254.jpg",
+			"caption": "Sudoku Magic",
+			"student": "Stan Haakman",
+			"year": "2020",
+			"email": "stan.haakman@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1782358.jpg",
+			"caption": "Vier op een Rij",
+			"student": "Sam van Roosmalen",
+			"year": "2020",
+			"email": " sam.vanroosmalen@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1782607.jpg",
+			"caption": "Keezenbot",
+			"student": "Laurens Lancel",
+			"year": "2020",
+			"email": "laurens.lancel@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1784480.jpg",
+			"caption": "SudokuSolver",
+			"student": "Ceyhun Cakir",
+			"year": "2020",
+			"email": "ceyhun.cakir@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1785902.jpg",
+			"caption": "Rummi: a Rummikub solver",
+			"student": "Levi Verhoef",
+			"year": "2020",
+			"email": "levi.verhoef@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1785924.jpg",
+			"caption": "RushHour",
+			"student": "Luka Herrmann",
+			"year": "2020",
+			"email": "luka.herrmann@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1786244.jpg",
+			"caption": "Object Placement with AR",
+			"student": "Johan van de Glind",
+			"year": "2020",
+			"email": "johan.vandeglind@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1788287.jpg",
+			"caption": "Skip-Bo",
+			"student": "Tobias Kramer",
+			"year": "2020",
+			"email": "tobias.t.kramer@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1789287.jpg",
+			"caption": "Chess Evaluator",
+			"student": "Khai-Tam Nguyen",
+			"year": "2020",
+			"email": "khai-tam.nguyen@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1789293.jpg",
+			"caption": "Maze Game",
+			"student": "Sjoerd Beetsma",
+			"year": "2020",
+			"email": "sjoerd.beetsma@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1789777.jpg",
+			"caption": "WalkAWay",
+			"student": "Alexander van Schaick Zillesen",
+			"year": "2020",
+			"email": "alexander.vanschaickzillesen@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1790042.jpg",
+			"caption": "Chess engine_99_",
+			"student": "Siebe van Zwaal",
+			"year": "2020",
+			"email": "siebe.vanzwaal@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1790472.jpg",
+			"caption": "Movie Enjoyment Predictor",
+			"student": "Jonathan Williams",
+			"year": "2020",
+			"email": "jonathan.williams@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2020/1792206.jpg",
+			"caption": "Orbital transfer pathfinder",
+			"student": "Maarten de Jeu",
+			"year": "2020",
+			"email": "maarten.dejeu@student.hu.nl"
+		}
+	]
+}

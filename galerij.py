@@ -96,6 +96,41 @@ def generate_gallery(df, category=''):
         # f.write(html_string_end)
 
 
+def generate_json(df, category=''):
+    base_domain = 'https://tijmenjoppe.github.io/IPASS-AI'
+
+    filename = category.replace(' ', '_').lower() + '.html'
+    if category == '':
+        filename = 'ipass-ai.json'
+
+    print(f"Creating JSON-file '{filename}' with {len(df)} entries...")
+    first_enty = True
+    with open(filename, 'w') as f:
+        i = 0
+        f.write('{\n\t"ipass-ai": [\n')
+
+        while i < len(df):
+            if i > 0:
+                f.write(',\n')
+
+            f.write('\t\t{\n')
+            f.write(f'\t\t\t"image": "{base_domain}/{df.iloc[i]["jaar"]}/{df.iloc[i]["studentnummer"]}.jpg",\n')
+            f.write(f'\t\t\t"caption": "{df.iloc[i]["titel"]}",\n')
+            f.write(f'\t\t\t"student": "{df.iloc[i]["naam"]}",\n')
+            f.write(f'\t\t\t"year": "{df.iloc[i]["jaar"]}",\n')
+
+            # Add email
+            email = df.iloc[i]['email']
+            if pd.isnull(df.iloc[i]['email']):  # Generate email if it is unavailable
+                email = '.'.join(df.iloc[i]['naam'].split(' ', 1)).lower().replace(' ', '') + '@student.hu.nl'
+            f.write(f'\t\t\t"email": "{email}"\n')
+            f.write('\t\t}')
+
+            i += 1
+
+        f.write('\n\t]\n}\n')
+
+
 def generate_slideshow(df, category=''):
     base_domain = 'https://tijmenjoppe.github.io/IPASS-AI'
 
@@ -168,6 +203,7 @@ if __name__ == '__main__':
         index_file.write("<a href='ipass.html'>Alle projecten</a> (<a href='ipass_slideshow.html'>slideshow</a>)\n\n")
         generate_gallery(df)
         generate_slideshow(df)
+        generate_json(df)
 
         # Create page for each year
         print("\nCreating pages grouped by year...")
