@@ -127,9 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-*.pdf
+
+
+# Custom
 galerij.csv
-2018/*.png
 galerij.html
-*/original/
 ipass-ai_qr.pptx
+
+*.pdf
+
+*/original/
+.idea/

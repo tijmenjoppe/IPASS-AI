@@ -165,7 +165,7 @@ if __name__ == '__main__':
         # Create page with all project posters
         print("Creating overview page...")
         index_file.write("<h1>IPASS AI</h1>\n\n")
-        index_file.write("<a href='ipass.html'}'>Alle projecten</a>\n\n")
+        index_file.write("<a href='ipass.html'>Alle projecten</a> (<a href='ipass_slideshow.html'>slideshow</a>)\n\n")
         generate_gallery(df)
         generate_slideshow(df)
 
@@ -176,7 +176,7 @@ if __name__ == '__main__':
         for jaar in jaren:
             generate_gallery(df[df['jaar'] == jaar], str(jaar))
             generate_slideshow(df[df['jaar'] == jaar], str(jaar))
-            index_file.write(f"   <li><a href='{str(jaar) + '.html'}'>{jaar}</a></li>\n")
+            index_file.write(f"   <li><a href='{str(jaar) + '.html'}'>{jaar}</a> (<a href='{str(jaar) + '_slideshow.html'}'>slideshow</a>)</li>\n")
 
         # Create page for each category/tag
         print("\nCreating pages grouped by tag...")
