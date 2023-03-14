@@ -122,9 +122,9 @@
 		{
 			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1755488.jpg",
 			"caption": "RiskSniffer",
-			"student": "Mick Luuring",
+			"student": "Kim Luuring",
 			"year": "2019",
-			"email": "mick.luuring@student.hu.nl"
+			"email": "kim.luuring@student.hu.nl"
 		},
 		{
 			"image": "https://tijmenjoppe.github.io/IPASS-AI/2019/1755585.jpg",
@@ -468,6 +468,69 @@
 			"student": "Maarten de Jeu",
 			"year": "2020",
 			"email": "maarten.dejeu@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2021/1719576.jpg",
+			"caption": "Micro Analyse",
+			"student": "Susan Bruggeling",
+			"year": "2021",
+			"email": "susan.bruggeling@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2021/1756617.jpg",
+			"caption": "Route van de boswachter",
+			"student": "Jasper van Loon",
+			"year": "2021",
+			"email": "jasper.vanloon@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2021/1759811.jpg",
+			"caption": "Genetisch roosteren",
+			"student": "Joris Heemskerk",
+			"year": "2021",
+			"email": "joris.heemskerk@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2021/1782152.jpg",
+			"caption": "Sudoku backtracking algorithm",
+			"student": "Henry de Lange",
+			"year": "2021",
+			"email": "henry.delange@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2021/1805616.jpg",
+			"caption": "Genre Classificatie",
+			"student": "Floris Kappen",
+			"year": "2021",
+			"email": "floris.kappen@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2021/1812996.jpg",
+			"caption": "Othello",
+			"student": "Max Visscher",
+			"year": "2021",
+			"email": "max.visscher@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2021/1813072.jpg",
+			"caption": "De betere boodschap",
+			"student": "Daan van Dijk",
+			"year": "2021",
+			"email": "daanvandijk@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2021/1813227.jpg",
+			"caption": "Vier op een rij",
+			"student": "Stijn Beekelaar",
+			"year": "2021",
+			"email": "stijn.beekelaar@student.hu.nl"
+		},
+		{
+			"image": "https://tijmenjoppe.github.io/IPASS-AI/2021/1815476.jpg",
+			"caption": "Schaakpuzzeler",
+			"student": "Bas de Blok",
+			"year": "2021",
+			"email": "bas.deblok@student.hu.nl"
 		}
 	]
 }
